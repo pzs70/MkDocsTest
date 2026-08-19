@@ -7,7 +7,9 @@ theme:
   palette:
     primary: indigo
     accent: indigo
-
-nav:
-  - Főoldal: index.md
-  - Második oldal: second.md
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+#nav:
+#  - Főoldal: index.md
+#  - Második oldal: second.md
