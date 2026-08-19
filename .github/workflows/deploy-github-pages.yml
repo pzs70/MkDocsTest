@@ -1,0 +1,32 @@
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Akkor fut le, ha a main branchbe pusholsz (vagy a Gemini bot beküldi a cikket)
+  workflow_dispatch:  # Lehetővé teszi a manuális indítást is az Actions fülről
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+
+      - name: Install MkDocs
+        run: |
+          pip install mkdocs
+
+      - name: Deploy to GitHub Pages
+        run: |
+          # Elvégzi a buildet és automatikusan feltölti a gh-pages branchre
+          mkdocs gh-deploy --force
