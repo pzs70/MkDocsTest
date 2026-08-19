@@ -10,3 +10,4 @@ theme:
 
 nav:
   - Főoldal: index.md
+  - Második oldal: second.md
