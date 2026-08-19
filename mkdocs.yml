@@ -2,7 +2,7 @@ site_name: Az Én Blogom / Dokumentációm
 site_url: https://pzs70.github.io/MkDocsTest/
 
 theme:
-  name: readthedocs
+  name: material
   language: hu
   palette:
     primary: indigo
