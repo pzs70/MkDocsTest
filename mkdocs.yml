@@ -1,1 +1,12 @@
-site_name: My Docs
+site_name: Az Én Blogom / Dokumentációm
+site_url: https://pzs70.github.io/MkDocsTest/
+
+theme:
+  name: readthedocs
+  language: hu
+  palette:
+    primary: indigo
+    accent: indigo
+
+nav:
+  - Főoldal: index.md
